@@ -1,45 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simple Calculator</title>
-  <link rel="stylesheet" href="calc.css">
-  <script src="calc.js"></script>
+  <link rel="stylesheet" href="calc.css" />
+  <script src="calc.js" defer></script>
 </head>
 <body>
 
-<div class="calc">
-  <div class="display">
-    <input type="text" id="result" readonly />
-  </div>
-  <div class="buttons">
-    <button onclick="clr()">AC</button>
-    <button onclick="del()">DEL</button>
-    <button onclick="addValue('/')">÷</button>
-    <button onclick="addValue('*')">*</button>
+  <main class="calculator">
+    <section class="display">
+      <input type="text" id="result" aria-label="Calculator display" readonly />
+    </section>
 
-    <button onclick="addValue('1')">1</button>
-    <button onclick="addValue('2')">2</button>
-    <button onclick="addValue('3')">3</button>
-    <button onclick="addValue('+')">+</button>
+    <section class="buttons">
+      <button class="btn function" onclick="clr()">AC</button>
+      <button class="btn function" onclick="del()">DEL</button>
+      <button class="btn operator" onclick="addValue('/')">÷</button>
+      <button class="btn operator" onclick="addValue('*')">×</button>
 
-    <button onclick="addValue('4')">4</button>
-    <button onclick="addValue('5')">5</button>
-    <button onclick="addValue('6')">6</button>
-    <button onclick="addValue('-')">-</button>
+      <button class="btn" onclick="addValue('1')">1</button>
+      <button class="btn" onclick="addValue('2')">2</button>
+      <button class="btn" onclick="addValue('3')">3</button>
+      <button class="btn operator" onclick="addValue('+')">+</button>
 
-    <button onclick="addValue('7')">7</button>
-    <button onclick="addValue('8')">8</button>
-    <button onclick="addValue('9')">9</button>
-    <button onclick="calculate()">=</button>
+      <button class="btn" onclick="addValue('4')">4</button>
+      <button class="btn" onclick="addValue('5')">5</button>
+      <button class="btn" onclick="addValue('6')">6</button>
+      <button class="btn operator" onclick="addValue('-')">−</button>
 
-    <button onclick="addValue('.')">.</button>
-    <button onclick="addValue('0')">0</button>
-  </div>
-</div>
+      <button class="btn" onclick="addValue('7')">7</button>
+      <button class="btn" onclick="addValue('8')">8</button>
+      <button class="btn" onclick="addValue('9')">9</button>
+      <button class="btn equals" onclick="calculate()">=</button>
+
+      <button class="btn" onclick="addValue('.')">.</button>
+      <button class="btn" onclick="addValue('0')">0</button>
+    </section>
+  </main>
 
 </body>
 </html>
-
